@@ -12,10 +12,30 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// ===================================================
+// user route 
 
-Route::get('/', function () {
-    return view('frontend/welcome');
-});
+
+// Route::get('/', function () {
+//     return view('frontend/welcome');
+// });
 Route::get('/category', function () {
     return view('frontend/category');
+});
+
+// ==================================================
+// admin route 
+
+
+Route::get('/', function () {
+    return view('admin/post');
+});
+Route::get('/add-post', function () {
+    return view('admin/add-post');
+});
+Route::get('/', function () {
+    return view('admin/post');
+});
+Route::get('/', function () {
+    return view('admin/post');
 });
