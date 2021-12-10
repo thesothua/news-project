@@ -28,14 +28,32 @@ Route::get('/category', function () {
 
 
 Route::get('/', function () {
+    return view('admin/index');
+});
+Route::get('/post', function () {
     return view('admin/post');
 });
 Route::get('/add-post', function () {
     return view('admin/add-post');
 });
-Route::get('/', function () {
-    return view('admin/post');
+Route::get('/add-category', function () {
+    return view('admin/add-category');
 });
-Route::get('/', function () {
-    return view('admin/post');
+Route::get('/category', function () {
+    return view('admin/category');
+});
+Route::get('/update-category', function () {
+    return view('admin/update-category');
+});
+Route::get('/update-post', function () {
+    return view('admin/update-post');
+});
+Route::get('/users', function () {
+    return view('admin/users');
+});
+Route::get('/add-user', function () {
+    return view('admin/add-user');
+});
+Route::get('/update-user', function () {
+    return view('admin/update-user');
 });

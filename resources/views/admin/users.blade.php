@@ -7,7 +7,7 @@
                   <h1 class="admin-heading">All Users</h1>
               </div>
               <div class="col-md-2">
-                  <a class="add-new" href="add-user.php">add user</a>
+                  <a class="add-new" href="{{url('/add-user')}}">add user</a>
               </div>
               <div class="col-md-12">
                   <table class="content-table">

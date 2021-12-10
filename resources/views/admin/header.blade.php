@@ -22,7 +22,7 @@
                 <div class="row">
                     <!-- LOGO -->
                     <div class="col-md-2">
-                        <a href="post.php"><img class="logo" src="images/news.jpg"></a>
+                        <a href="{{url('/post')}}"><img class="logo" src="images/news.jpg"></a>
                     </div>
                     <!-- /LOGO -->
                       <!-- LOGO-Out -->
@@ -41,13 +41,13 @@
                     <div class="col-md-12">
                        <ul class="admin-menu">
                             <li>
-                                <a href="post.php">Post</a>
+                                <a href="{{url('/post')}}">Post</a>
                             </li>
                             <li>
-                                <a href="category.php">Category</a>
+                                <a href="{{url('/category')}}">Category</a>
                             </li>
                             <li>
-                                <a href="users.php">Users</a>
+                                <a href="{{url('/users')}}">Users</a>
                             </li>
                         </ul>
                     </div>

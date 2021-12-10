@@ -8,7 +8,7 @@
                 <h1 class="admin-heading">All Categories</h1>
             </div>
             <div class="col-md-2">
-                <a class="add-new" href="add-category.php">add category</a>
+                <a class="add-new" href="{{url('/add-category')}}">add category</a>
             </div>
             <div class="col-md-12">
                 <table class="content-table">
