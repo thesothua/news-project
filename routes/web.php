@@ -37,6 +37,7 @@ Route::get('/add-user',[UserController::class, 'index']);
 Route::post('/add-user',[UserController::class, 'addUser']);
 
 Route::get('admin/post',[PostController::class, 'index']);
+
 Route::get('/add-category', function () {
     return view('admin/add-category');
 });
