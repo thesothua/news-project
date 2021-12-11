@@ -41,7 +41,7 @@
                     <div class="col-md-12">
                        <ul class="admin-menu">
                             <li>
-                                <a href="{{url('/post')}}">Post</a>
+                                <a href="{{url('/admin/post')}}">Post</a>
                             </li>
                             <li>
                                 <a href="{{url('/category')}}">Category</a>

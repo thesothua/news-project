@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +33,10 @@ Route::get('/category', function () {
 Route::get('/', function () {
     return view('admin/index');
 });
-Route::get('/post', function () {
-    return view('admin/post');
-});
-Route::get('/add-post', function () {
-    return view('admin/add-post');
-});
+Route::get('/add-user',[UserController::class, 'index']);
+Route::post('/add-user',[UserController::class, 'addUser']);
+
+Route::get('admin/post',[PostController::class, 'index']);
 Route::get('/add-category', function () {
     return view('admin/add-category');
 });
@@ -50,9 +51,6 @@ Route::get('/update-post', function () {
 });
 Route::get('/users', function () {
     return view('admin/users');
-});
-Route::get('/add-user', function () {
-    return view('admin/add-user');
 });
 Route::get('/update-user', function () {
     return view('admin/update-user');
