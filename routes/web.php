@@ -33,14 +33,22 @@ Route::get('/category', function () {
 Route::get('/', function () {
     return view('admin/index');
 });
-Route::get('/add-user',[UserController::class, 'index']);
-Route::post('/add-user',[UserController::class, 'addUser']);
+Route::get('/admin/users',[UserController::class, 'index']);
+Route::get('/admin/add-user',[UserController::class, 'ViewaddUser']);
+Route::post('/admin/add-user',[UserController::class, 'addUser']);
 
-Route::get('admin/post',[PostController::class, 'index']);
+Route::get('/admin/post',[PostController::class, 'index']);
 
-Route::get('/add-category', function () {
-    return view('admin/add-category');
-});
+Route::get('/admin/add-post',[PostController::class, 'ViewaddPost']);
+Route::post('/admin/add-post',[PostController::class, 'addPost']);
+
+Route::get('/admin/category',[CategoryController::class, 'index']);  
+Route::get('/admin/add-category',[CategoryController::class, 'ViewaddCategory']);
+Route::post('/admin/add-category',[CategoryController::class, 'addCategory']);
+
+
+
+
 Route::get('/category', function () {
     return view('admin/category');
 });

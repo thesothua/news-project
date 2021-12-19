@@ -44,10 +44,10 @@
                                 <a href="{{url('/admin/post')}}">Post</a>
                             </li>
                             <li>
-                                <a href="{{url('/category')}}">Category</a>
+                                <a href="{{url('/admin/category')}}">Category</a>
                             </li>
                             <li>
-                                <a href="{{url('/users')}}">Users</a>
+                                <a href="{{url('/admin/users')}}">Users</a>
                             </li>
                         </ul>
                     </div>

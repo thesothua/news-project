@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->text('description')->unique();
             $table->integer('category')->unsigned();
             $table->foreign('category')->references('category_id')->on('categories');
-            $table->date('post_date');
+            $table->date('post_date')->nullable();
             $table->integer('author')->unsigned();
             $table->foreign('author')->references('user_id')->on('users');
             $table->binary('post_image')->nullable();

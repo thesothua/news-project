@@ -9,6 +9,16 @@ class UserController extends Controller
 {
  public function index()
  {
+     $Users = User::all();
+     
+     $user_arr = compact('Users');
+     return view('/admin/users')->with($user_arr);
+ }
+
+
+
+ public function ViewaddUser()
+ {
      return view('admin/add-user');
  }
 
@@ -36,7 +46,7 @@ class UserController extends Controller
     $User->role = $request->role;
 
     $User->save();
-    return redirect('admin/post');
+    return redirect('/admin/users');
      
  }
 }

@@ -13,7 +13,7 @@
               <div class="col-md-offset-3 col-md-6">
                   <!-- Form Start -->
 
-                  <form  action="{{'/add-user'}}" method ="POST" autocomplete="off">
+                  <form  action="{{'/admin/add-user'}}" method ="POST" autocomplete="off">
                     @csrf
                       <div class="form-group">
                           <label>First Name</label>
@@ -47,7 +47,7 @@
                       </div>
                       <div class="form-group">
                           <label>Email Address</label>
-                          <input type="email" name="email" class="form-control" placeholder="Email"  value="{{old('eamil')}}" required>
+                          <input type="email" name="email" class="form-control" placeholder="Email"  value="{{old('email')}}" required>
                           <span class="text-danger">
                             @error('email')
                             {{$message}}
