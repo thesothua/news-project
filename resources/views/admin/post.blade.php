@@ -24,9 +24,13 @@
                           <th>Delete</th>
                         </thead>
                       <tbody>
-                        @foreach ($allPost as $post)
+                     
+                            @if ($allPost != null)
+                                
                             
-                        <tr>
+                            @foreach ($allPost as $post)
+                            
+                          <tr>
                           <td class='id'>@php
                             echo "A".sprintf('%05d', $post->post_id)
                           @endphp</td>
@@ -38,6 +42,9 @@
                               <td class='delete'><a href='{{url('admin/delete-post')}}'><i class='fa fa-trash-o'></i></a></td>
                             </tr>
                             @endforeach
+                            
+                            @endif
+                            <h2>Post Not Founde</h2>
                           </tbody>
                     </table>
                   <ul class='pagination admin-pagination'>
