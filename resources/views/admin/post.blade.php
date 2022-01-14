@@ -27,7 +27,9 @@
                         @foreach ($allPost as $post)
                             
                         <tr>
-                          <td class='id'>{{$post->post_id}}</td>
+                          <td class='id'>@php
+                            echo "A".sprintf('%05d', $post->post_id)
+                          @endphp</td>
                               <td>{{$post->title}}</td>
                               <td>{{$post->category_name}}</td>
                               <td>{{$post->post_date}}</td>

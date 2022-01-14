@@ -19,25 +19,23 @@ use App\Http\Controllers\UserController;
 // user route 
 
 
-// Route::get('/', function () {
-//     return view('frontend/welcome');
+Route::get('/', [UserController::class, 'UserIndex']);
+// Route::get('/category', function () {
+//     return view('frontend/category');
 // });
-Route::get('/category', function () {
-    return view('frontend/category');
-});
 
 // ==================================================
 // admin route 
 
 
-Route::get('/', function () {
-    return view('admin/index');
-});
+// Route::get('/', function () {
+//     return view('admin/index');
+// });
 Route::get('/admin/users',[UserController::class, 'index']);
 Route::get('/admin/add-user',[UserController::class, 'ViewaddUser']);
 Route::post('/admin/add-user',[UserController::class, 'addUser']);
 
-Route::get('/admin/post',[PostController::class, 'index']);
+Route::get('/admin/post/',[PostController::class, 'index']);
 
 Route::get('/admin/add-post',[PostController::class, 'ViewaddPost']);
 Route::post('/admin/add-post',[PostController::class, 'addPost']);

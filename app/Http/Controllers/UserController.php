@@ -15,6 +15,11 @@ class UserController extends Controller
      return view('/admin/users')->with($user_arr);
  }
 
+ public function UserIndex()
+ {
+     
+ }
+
 
 
  public function ViewaddUser()

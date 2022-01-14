@@ -50,6 +50,14 @@
                                 <a href="{{url('/admin/users')}}">Users</a>
                             </li>
                         </ul>
+
+                        <form action="{{url('/admin/post')}}" method="get">
+                         <div class="form-group">
+                           <label for=""></label>
+                           <input type="text" class="form-control" name="search" id="search" aria-describedby="helpId" placeholder="">
+                           <input type="submit" value="Search" name="searchbtn">
+                         </div>   
+                        </form>
                     </div>
                 </div>
             </div>

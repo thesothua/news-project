@@ -9,14 +9,14 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index()
-    {
-        $PostData = Post::getPostData();
-
-         
+    public function index(Request $request)
+    { 
         // echo "<pre>";
-        // print_r($allPost->all());
+        // print_r($request['search']);
+        
+       
 
+        $PostData = Post::getPostData($request['search']);
 
         return view('admin/post',['allPost' => $PostData]);
 
