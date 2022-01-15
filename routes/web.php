@@ -35,7 +35,7 @@ Route::get('/admin/users',[UserController::class, 'index']);
 Route::get('/admin/add-user',[UserController::class, 'ViewaddUser']);
 Route::post('/admin/add-user',[UserController::class, 'addUser']);
 
-Route::get('/admin/post/',[PostController::class, 'index']);
+Route::get('/admin/post/{id?}',[PostController::class, 'index']);
 
 Route::get('/admin/add-post',[PostController::class, 'ViewaddPost']);
 Route::post('/admin/add-post',[PostController::class, 'addPost']);
