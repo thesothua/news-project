@@ -49,7 +49,6 @@ class Post extends Model
          
         } else {
 
-
             $PostData = DB::table('posts')->select('posts.*', 'categories.category_name', 'users.username')
                 ->leftJoin('categories', 'categories.category_id', '=', 'posts.category')->leftJoin('users', 'users.user_id', '=', 'posts.author')->get();
                 return $PostData;
